@@ -23,7 +23,7 @@ class Solution {
         if(root1 == null){
             return root2;
         }else{
-            return root;
+            return root1;
         }
         
     }
