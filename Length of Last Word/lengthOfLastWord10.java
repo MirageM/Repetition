@@ -9,4 +9,4 @@ class Solution {
         }
         return s.substring(first).trim().length();
     }
-}       
+}
