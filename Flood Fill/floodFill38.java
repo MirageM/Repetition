@@ -12,7 +12,7 @@ class Solution {
         }
         if(image[sr][sc] != curr){
             return;
-        }x
+        }
         image[sr][sc] = color;
         //Breadth First Search
         floodFill(image, sr - 1, sc, color, curr);
