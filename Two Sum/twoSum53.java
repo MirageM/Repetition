@@ -1,13 +1,15 @@
 class Solution {
-    public boolean isAnagram(String s, String t) {
-        Map<Character, Integer> dict1 = new HashMap<>();
-        Map<Character, Integer> dict2 = new HashMap<>();
-        for(char c: s.toCharArray()){
-            dict1.put(c, dict1.getOrDefault(c, 0) + 1);
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> nMap = new HashMap<>();
+        for(int i = 0; i < nums.length; i++){
+            nMap.put(nums[i], i);
         }
-        for(char c: t.toCharArray()){
-            dict2.put(c, dict2.getOrDefault(c, 0) + 1);
+        for(int i = 0; i < nums.length; i++){
+            int complement = target - nums[i];
+            if(nMap.containsKey(complement) && nMap.get(complement) != i){
+                return new int[]{i, nMap.get(complement)};
+            }
         }
-        return dict1.equals(dict2);
+        return new int[]{};
     }
 }
