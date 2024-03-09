@@ -21,6 +21,7 @@ class Solution {
         if(left > right){
             return null;
         }
+        //int mid = left + (right - left)/2;
         int mid = left + (right - left)/2;
         TreeNode root = new TreeNode(nums[mid]);
         root.left = sortedArrayToBST(nums, left, mid - 1);
