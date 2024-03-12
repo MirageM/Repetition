@@ -1,20 +1,23 @@
 class Solution {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        Set<Integer> set1 = new HashSet<>();
-        Set<Integer> set2 = new HashSet<>();
-        for(int n: nums1){
-            set1.add(n);
+    public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        if(image[sr][sc] == color){
+            return image;
         }
-        for(int n: nums2){
-            if(set1.contains(n)){
-                set2.add(n);
-            }
+        floodFill(image, sr, sc, color, image[sr][sc]);
+        return image;
+    }
+    private void floodFill(int[][] image, int sr, int sc, int color, int curr){
+        if(sr < 0 || sr >= image.length || sc < 0 || sc >= image[0].length){
+            return;
         }
-        int[] result = new int[set2.size()];
-        int index = 0;
-        for(int n: set2){
-            result[index++] = n;
+        if(image[sr][sc] != curr){
+            return;
         }
-        return result;
+        image[sr][sc] = color;
+        //Breadth First Search
+        floodFill(image, sr - 1, sc, color, curr);
+        floodFill(image, sr + 1, sc, color, curr);
+        floodFill(image, sr, sc - 1, color, curr);
+        floodFill(image, sr, sc + 1, color, curr);
     }
 }
