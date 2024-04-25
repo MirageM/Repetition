@@ -9,6 +9,7 @@
  * }
  */
 class Solution {
+    // Iterative solution
     public ListNode reverseList(ListNode head) {
         if(head == null){
             return null;
