@@ -1,28 +1,20 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution {
-    public TreeNode invertTree(TreeNode root) {
-        if(root == null){
-            return null;
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+        for(int n: nums1){
+            set1.add(n);
         }
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
-        invertTree(root.left);
-        invertTree(root.right);
-        return root;
+        for(int n: nums2){
+            if(set1.contains(n)){
+                set2.add(n);
+            }
+        }
+        int[] result = new int[set2.size()];
+        int index = 0;
+        for(int n: set2){
+            result[index++] = n;
+        }
+        return result;
     }
 }
