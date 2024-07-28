@@ -2,7 +2,7 @@ class Solution {
     public boolean isAnagram(String s, String t) {
         Map<Character, Integer> dict1 = new HashMap<>();
         Map<Character, Integer> dict2 = new HashMap<>();
-        for(char c: s.toCharArray()){
+        for(char c : s.toCharArray()){
             dict1.put(c, dict1.getOrDefault(c, 0) + 1);
         }
         for(char c: t.toCharArray()){
@@ -10,4 +10,4 @@ class Solution {
         }
         return dict1.equals(dict2);
     }
-} 
+}
