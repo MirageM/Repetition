@@ -10,6 +10,7 @@ class Solution {
                 set2.add(n);
             }
         }
+        // int[] result = new int[set2.size()];
         int[] result = new int[set2.size()];
         int index = 0;
         for(int n: set2){
