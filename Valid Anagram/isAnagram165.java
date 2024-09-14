@@ -3,7 +3,7 @@ class Solution {
         Map<Character, Integer> dict1 = new HashMap<>();
         Map<Character, Integer> dict2 = new HashMap<>();
         for(char c: s.toCharArray()){
-            dict1.put(c, dict1.getOrDefault(c, 0) + 1);
+            dict1.put(c, dict1.getOrDefault(c, 0) + 1);z
         }
         for(char c: t.toCharArray()){
             dict2.put(c, dict2.getOrDefault(c, 0) + 1);
