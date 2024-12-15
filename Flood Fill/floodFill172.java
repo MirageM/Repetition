@@ -3,7 +3,7 @@ class Solution {
         if(image[sr][sc] == color){
             return image;
         }
-        floodFill(image, sr, sr, color, image[sr][sc]);
+        floodFill(image, sr, sc, color, image[sr][sc]);
         return image;
     }
     private void floodFill(int[][] image, int sr, int sc, int color, int curr){
