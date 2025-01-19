@@ -8,6 +8,6 @@ class Solution {
         for(char c: t.toCharArray()){
             dict2.put(c, dict2.getOrDefault(c, 0) + 1);
         }
-        return dict1.equals(dict2);a
+        return dict1.equals(dict2);
     }
 }
