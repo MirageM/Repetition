@@ -6,8 +6,8 @@ class Solution {
             set1.add(n);
         }
         for(int n: nums2){
-            if(set1.contains(n1)){
-                set2.add(n2);
+            if(set1.contains(n)){
+                set2.add(n);
             }
         }
         int[] result = new int[set2.size()];
