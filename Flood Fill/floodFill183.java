@@ -8,7 +8,7 @@ class Solution {
     }
     private void floodFill(int[][] image, int sr, int sc, int color, int curr){
         if(sr < 0 || sr >= image.length || sc < 0 || sc >= image[0].length){
-            return;z
+            return;
         }
         if(image[sr][sc] != curr){
             return;
